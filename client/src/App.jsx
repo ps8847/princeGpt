@@ -18,12 +18,14 @@ function App() {
     document.querySelector('.layout').scrollTop = document.querySelector('.layout').scrollHeight;
   } , [posts])
   const fetchResponse = async () => {
-    const data = await axios.post("http://localhost:4000" , {input} , 
-    {
-      headers: {
-        "Content-Type" : "application/json",
+    const data = await axios.post(
+      "https://prince-gpt.onrender.com",
+      { input },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
       }
-    }
     );
 
     return data;
